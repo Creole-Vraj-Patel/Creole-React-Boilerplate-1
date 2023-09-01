@@ -1,1 +1,1 @@
-export const obj = {};
+export const obj = {}

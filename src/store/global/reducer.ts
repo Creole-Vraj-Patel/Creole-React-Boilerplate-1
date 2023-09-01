@@ -1,21 +1,24 @@
-import { ActionEnums, Actions } from './actions';
-import { GlobalState, initialState } from './initialState';
+import { ActionEnums, type Actions } from './actions'
+import { type GlobalState, initialState } from './initialState'
 
-const globalReducer = (state: GlobalState = initialState, action: Actions): GlobalState => {
+const globalReducer = (
+  state: GlobalState = initialState,
+  action: Actions
+): GlobalState => {
   switch (action.type) {
     case ActionEnums.TOGGLE_GLOBAL_LOADER_TRUE:
       return {
         ...state,
-        loading: true,
-      };
+        loading: true
+      }
     case ActionEnums.TOGGLE_GLOBAL_LOADER_FALSE:
       return {
         ...state,
-        loading: false,
-      };
+        loading: false
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default globalReducer;
+export default globalReducer

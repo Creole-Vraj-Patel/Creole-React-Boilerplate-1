@@ -1,14 +1,14 @@
 export interface PostDetails {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  userId: number
+  id: number
+  title: string
+  body: string
 }
 
 export interface DashboardState {
-  posts: PostDetails[];
+  posts: PostDetails[]
 }
 
 export const initialState = {
-  posts: [],
-};
+  posts: []
+}

@@ -7,5 +7,5 @@ export const apiEndpoints = {
   getPostComments: '/posts/:postId/comments',
   addPost: '/posts',
   updatePost: '/posts/:postId',
-  deletePost: '/posts/:postId',
-};
+  deletePost: '/posts/:postId'
+}

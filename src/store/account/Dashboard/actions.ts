@@ -1,4 +1,4 @@
-import { PostDetails } from './initialState';
+import { type PostDetails } from './initialState'
 
 export enum ActionEnums {
   GET_ALL_POSTS = 'GET_ALL_POSTS',
@@ -14,23 +14,23 @@ export enum ActionEnums {
 
 export type Actions =
   | {
-      type: ActionEnums.GET_ALL_POSTS_SUCCESS;
-      payload: PostDetails[];
-    }
+    type: ActionEnums.GET_ALL_POSTS_SUCCESS
+    payload: PostDetails[]
+  }
   | {
-      type: ActionEnums.GET_ALL_POSTS_FAILED;
-    };
+    type: ActionEnums.GET_ALL_POSTS_FAILED
+  }
 
 export const actions = {
   getAllPostsDetails: () => ({
-    type: ActionEnums.GET_ALL_POSTS,
+    type: ActionEnums.GET_ALL_POSTS
   }),
   updatePostDetails: (payload: PostDetails) => ({
     type: ActionEnums.UPDATE_POST_DATA,
-    payload,
+    payload
   }),
   deletePost: (payload: string) => ({
     type: ActionEnums.DELETE_POST,
-    payload,
-  }),
-};
+    payload
+  })
+}

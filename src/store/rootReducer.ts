@@ -1,12 +1,12 @@
-import { combineReducers } from 'redux';
-import globalReducer from './global/reducer';
-import dashboardReducer from './account/Dashboard/reducer';
+import { combineReducers } from 'redux'
+import globalReducer from './global/reducer'
+import dashboardReducer from './account/Dashboard/reducer'
 
 const rootReducer = combineReducers({
   globalReducer,
-  dashboardReducer,
-});
+  dashboardReducer
+})
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>
 
-export default rootReducer;
+export default rootReducer

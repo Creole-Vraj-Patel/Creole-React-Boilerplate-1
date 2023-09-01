@@ -1,18 +1,18 @@
-import React, { FC, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getLocalItem } from '../../utils';
+import React, { type FC, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { getLocalItem } from '../../utils'
 
 const PublicRoute: FC<{ children: JSX.Element }> = ({ children }): any => {
-  const isAuthenticated = getLocalItem('access-token');
-  const navigate = useNavigate();
+  const isAuthenticated = getLocalItem('access-token')
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/account/dashboard');
+      navigate('/account/dashboard')
     }
-  });
+  })
 
-  return children;
-};
+  return children
+}
 
-export default PublicRoute;
+export default PublicRoute

@@ -1,7 +1,7 @@
 export interface GlobalState {
-  loading: boolean;
+  loading: boolean
 }
 
 export const initialState = {
-  loading: false,
-};
+  loading: false
+}

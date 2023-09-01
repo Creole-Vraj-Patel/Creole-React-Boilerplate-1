@@ -1,24 +1,24 @@
-import { AuthInstance } from '../../instances/AuthInstance';
-import { apiEndpoints } from '../../../constants/apiEndpoints';
-import { apiMethods } from '../../../constants/enums';
-import { addPostPayload } from './payloadTypes';
+import { AuthInstance } from '../../instances/AuthInstance'
+import { apiEndpoints } from '../../../constants/apiEndpoints'
+import { apiMethods } from '../../../constants/enums'
+import { type addPostPayload } from './payloadTypes'
 
-export const fetchAllPosts = () => {
-  return AuthInstance({
+export const fetchAllPosts = async () => {
+  return await AuthInstance({
     method: apiMethods.GET,
-    url: apiEndpoints.getPosts,
-  });
-};
+    url: apiEndpoints.getPosts
+  })
+}
 
-export const deletePost = (postId: string) =>
-  AuthInstance({
+export const deletePost = async (postId: string) =>
+  await AuthInstance({
     method: apiMethods.DELETE,
-    url: apiEndpoints.deletePost.replace(':postId', postId),
-  });
+    url: apiEndpoints.deletePost.replace(':postId', postId)
+  })
 
-export const addPost = (payload: addPostPayload) =>
-  AuthInstance({
+export const addPost = async (payload: addPostPayload) =>
+  await AuthInstance({
     method: apiMethods.POST,
     url: apiEndpoints.addPost,
-    data: { ...payload },
-  });
+    data: { ...payload }
+  })

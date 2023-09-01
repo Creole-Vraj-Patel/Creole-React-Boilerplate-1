@@ -5,8 +5,8 @@ export enum ActionEnums {
 
 export type Actions =
   | {
-      type: ActionEnums.TOGGLE_GLOBAL_LOADER_FALSE;
-    }
+    type: ActionEnums.TOGGLE_GLOBAL_LOADER_FALSE
+  }
   | {
-      type: ActionEnums.TOGGLE_GLOBAL_LOADER_TRUE;
-    };
+    type: ActionEnums.TOGGLE_GLOBAL_LOADER_TRUE
+  }
